@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router";
 import HomeLayout from "../Layout/HomeLayout";
+import AddTask from "../pages/AddTask";
 
 const router = createBrowserRouter(
     [
@@ -18,6 +19,10 @@ const router = createBrowserRouter(
         {
             path: "/*",
             element: <div>404 Error</div>
+        },
+        {
+            path: "/addTask",
+            element: <AddTask></AddTask>
         }
     ]
 )

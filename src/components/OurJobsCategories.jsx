@@ -4,7 +4,7 @@ import "swiper/css";
 
 const Carousel = () => {
   return (
-    <div className="mt-20 mb-20">
+    <div className="mt-20 mb-20 md:mx-10">
       <h2 className="text-5xl font-bold mb-10 text-center">Our Services</h2>
       <Swiper
         modules={[Autoplay]}
@@ -25,8 +25,8 @@ const Carousel = () => {
       >
         <SwiperSlide>
           <div className="  h-100 bg-[url('https://i.ibb.co/ksh20G7g/photomen.webp')] bg-cover bg-center bg-no-repeat rounded-xl">
-            <div className="pt-2">
-              <h3 className="relative z-10 text-black ml-40 w-30 p-2 bg-white rounded-sm text-center ">
+            <div className="pt-2 flex justify-end">
+              <h3 className="relative z-10 text-black mr-2 w-30 p-2 bg-white rounded-sm text-center ">
                 11 Listing
               </h3>
             </div>

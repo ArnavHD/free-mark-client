@@ -44,9 +44,13 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <div className='flex justify-center items-center'>
+            <div className="flex justify-center items-center">
               <div>
-                <img src={"https://i.ibb.co/KpTVCw0y/F-logo.webp"} className='w-14 h-14 rounded-br-xl rounded-tl-xl' alt="" />
+                <img
+                  src={"https://i.ibb.co/KpTVCw0y/F-logo.webp"}
+                  className="w-14 h-14 rounded-br-xl rounded-tl-xl"
+                  alt=""
+                />
               </div>
               <div>
                 <a className="btn btn-ghost text-2xl gugi text-white">
@@ -64,12 +68,17 @@ const Navbar = () => {
               </li>
               <li>
                 <NavLink to="/" className="text-xl text-white">
-                  All Jobs
+                  Browse Tasks
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/" className="text-xl text-white">
-                  My Jobs
+                  My Tasks
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/addTask" className="text-xl text-white">
+                  Add Task
                 </NavLink>
               </li>
             </ul>

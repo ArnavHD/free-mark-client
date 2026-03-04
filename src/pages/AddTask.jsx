@@ -1,8 +1,16 @@
-import React from "react";
+import React, { use } from "react";
 import Navbar from "../components/Navbar";
 import Swal from "sweetalert2";
+import { AuthContext } from "../provider/AuthProvider";
+import Loading from "./Loading";
 
 const AddTask = () => {
+    const {user, loading} = use(AuthContext);
+
+if(loading){
+    return <Loading></Loading>
+}
+
   const handleAddTask = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -51,8 +59,9 @@ const AddTask = () => {
               <input
                 type="text"
                 name="name"
-                className="input w-full"
-                placeholder="Enter Name"
+                className="input w-full disabled:border-gray-200 text-gray-400 cursor-not-allowed pointer-events-none"
+                value={user.displayName}
+                
               />
             </fieldset>
             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
@@ -60,8 +69,9 @@ const AddTask = () => {
               <input
                 type="email"
                 name="email"
-                className="input w-full"
-                placeholder="Enter Email"
+                className="input w-full disabled:border-gray-200 text-gray-400 cursor-not-allowed pointer-events-none"
+                value={user.email}
+                
               />
             </fieldset>
             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4">
@@ -71,11 +81,17 @@ const AddTask = () => {
                 name="task_Title"
                 className="input w-full"
                 placeholder="Your Task Title"
+                required
               />
             </fieldset>
             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
               <label className="label">Categories</label>
-              <select name="category" defaultValue="" className="select">
+              <select
+                name="category"
+                defaultValue=""
+                className="select"
+                required
+              >
                 <option value="" disabled>
                   Pick a Category
                 </option>
@@ -99,11 +115,12 @@ const AddTask = () => {
                 name="description"
                 className="input w-full"
                 placeholder="What needs to be Done"
+                required
               />
             </fieldset>
             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
               <label className="label">Deadline</label>
-              <input type="date" name="Deadline" className="input" />
+              <input type="date" name="Deadline" className="input" required />
             </fieldset>
             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4">
               <label className="label">Budget</label>
@@ -112,6 +129,7 @@ const AddTask = () => {
                 name="Budget"
                 className="input w-full"
                 placeholder="Enter Budget in CAD"
+                required
               />
             </fieldset>
             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
@@ -121,6 +139,7 @@ const AddTask = () => {
                 className="input w-full"
                 name="url"
                 placeholder="Enter Photo URL"
+                required
               />
             </fieldset>
           </div>

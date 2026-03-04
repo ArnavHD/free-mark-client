@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { use } from 'react';
 import "./../index.css";
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
+import { AuthContext } from '../provider/AuthProvider';
+import { FaCircleUser } from 'react-icons/fa6';
 
 const Navbar = () => {
+  const { user, logOut } = use(AuthContext);
+  const handleLogOut = ()=>{
+    console.log("User trying to logout");
+    logOut()
+      .then(() => {
+        alert("Logged Out Successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+  }
     return (
-      <div className="mx-36">
+      <div className="md:mx-36">
+        {/* <h1 className="text-white">{user && user.email}</h1> */}
         <div className="navbar bg-transparent ">
           <div className="navbar-start">
             <div className="dropdown">
@@ -15,7 +30,7 @@ const Navbar = () => {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
+                  className="h-6 w-6 text-white"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -37,15 +52,36 @@ const Navbar = () => {
                   <a>Home</a>
                 </li>
                 <li>
-                  <a>All Jobs</a>
+                  <a>Browse Tasks</a>
                 </li>
                 <li>
-                  <a>My Jobs</a>
+                  <a>My Tasks</a>
+                </li>
+                <li>
+                  {user ? (
+                    <div className="flex justify-between">
+                      <FaCircleUser size={30} />
+                      <div>
+                        <button onClick={handleLogOut} className="btn">
+                          LogOut
+                        </button>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="flex gap-4">
+                      <Link to="/auth/login">
+                        <a className="btn">Login</a>
+                      </Link>
+                      <Link to="/auth/register">
+                        <a className="btn">Register</a>
+                      </Link>
+                    </div>
+                  )}
                 </li>
               </ul>
             </div>
             <div className="flex justify-center items-center">
-              <div>
+              <div className="w-14 h-14">
                 <img
                   src={"https://i.ibb.co/KpTVCw0y/F-logo.webp"}
                   className="w-14 h-14 rounded-br-xl rounded-tl-xl"
@@ -53,7 +89,7 @@ const Navbar = () => {
                 />
               </div>
               <div>
-                <a className="btn btn-ghost text-2xl gugi text-white">
+                <a className="btn btn-ghost text-2xl gugi text-white whitespace-nowrap">
                   Free-Mark
                 </a>
               </div>
@@ -67,12 +103,18 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/" className="text-xl text-white">
+                <NavLink
+                  to="/browse-tasks-layout/browse-tasks"
+                  className="text-xl text-white"
+                >
                   Browse Tasks
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/" className="text-xl text-white">
+                <NavLink
+                  to="/browse-tasks-layout/my-tasks"
+                  className="text-xl text-white"
+                >
                   My Tasks
                 </NavLink>
               </li>
@@ -83,9 +125,32 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <div className="navbar-end gap-4">
-            <a className="btn">Login</a>
-            <a className="btn">Register</a>
+          <div className="navbar-end gap-4 hidden md:flex">
+            {/* <Link to="/auth/login">
+              <a className="btn">Login</a>
+            </Link>
+            <Link to="/auth/register">
+              <a className="btn">Register</a>
+            </Link> */}
+            {user ? (
+              <div className="flex justify-between items-center gap-4">
+                <FaCircleUser size={35} color="white" />
+                <div>
+                  <button onClick={handleLogOut} className="btn">
+                    LogOut
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className="flex gap-4">
+                <Link to="/auth/login">
+                  <a className="btn">Login</a>
+                </Link>
+                <Link to="/auth/register">
+                  <a className="btn">Register</a>
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </div>

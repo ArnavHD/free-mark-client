@@ -11,7 +11,7 @@ const Navbar = () => {
     console.log("User trying to logout");
     logOut()
       .then(() => {
-        alert("Logged Out Successfully");
+        // alert("Logged Out Successfully");
       })
       .catch((error) => {
         console.log(error);

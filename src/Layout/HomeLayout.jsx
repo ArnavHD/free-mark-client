@@ -5,6 +5,7 @@ import News from '../pages/News';
 import Faq from '../pages/Faq';
 import StreamLine from '../pages/StreamLine';
 import Packages from '../pages/Packages';
+import Footer from '../pages/Footer';
 
 const HomeLayout = () => {
     return (
@@ -15,6 +16,7 @@ const HomeLayout = () => {
             <StreamLine></StreamLine>
             <Packages></Packages>
             <Faq></Faq>
+            <Footer></Footer>
         </div>
     );
 };

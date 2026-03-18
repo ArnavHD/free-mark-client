@@ -20,7 +20,7 @@ const LoginPage = () => {
           .then((result) => {
             const user = result.user;
             console.log(user);
-            navigate(`${location.state ? location.state : "/"}`);
+            navigate(`${location.state ? location.state : "/" }`);
           })
           .catch((error) => {
             const errorCode = error.code;

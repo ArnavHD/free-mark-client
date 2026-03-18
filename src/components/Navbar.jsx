@@ -1,17 +1,20 @@
 import React, { use } from 'react';
 import "./../index.css";
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import { FaCircleUser } from 'react-icons/fa6';
 
 const Navbar = () => {
   const { user, logOut } = use(AuthContext);
   console.log(user);
+  const navigate = useNavigate();
   const handleLogOut = ()=>{
     console.log("User trying to logout");
     logOut()
       .then(() => {
         // alert("Logged Out Successfully");
+        console.log("Logout successful");
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);

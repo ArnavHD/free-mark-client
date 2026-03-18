@@ -1,4 +1,5 @@
 import React from 'react';
+import { BsFillBagPlusFill } from 'react-icons/bs';
 import { FaNetworkWired, FaUsersLine } from 'react-icons/fa6';
 
 const StreamLine = () => {
@@ -28,7 +29,7 @@ const StreamLine = () => {
           </div>
           <div className="text-center space-y-4 md:border-r md:border-r-gray-300 md:p-10">
             <div className="border border-gray-200 shadow-2xl rounded-full h-16 w-16 flex justify-center items-center mx-auto">
-              <FaNetworkWired size={40} />
+              <BsFillBagPlusFill size={40} />
             </div>
             <div className="space-y-3">
               <h1 className="text-2xl font-semibold">Employer</h1>

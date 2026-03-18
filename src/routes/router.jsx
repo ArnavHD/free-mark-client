@@ -10,6 +10,7 @@ import LoginPage from "../pages/LoginPage";
 import Register from "../pages/Register";
 import AuthLayout from "../Layout/AuthLayout";
 import PrivateRoute from "../provider/PrivateRoute";
+import UpdateTask from "../pages/UpdateTask";
 
 const router = createBrowserRouter([
   {
@@ -38,7 +39,6 @@ const router = createBrowserRouter([
     //   );
     //   console.log(data);
     // },
-
     // element: (
     //   <PrivateRoute>
     //     <MyTasks></MyTasks>
@@ -67,10 +67,12 @@ const router = createBrowserRouter([
       {
         path: "my-tasks",
         loader: () => {
-           return fetch("http://localhost:3000/tasks").then(res => res.json()).then(data=>{
-            console.log("Loader Data:", data);
-            return data;
-           });
+          return fetch("http://localhost:3000/tasks")
+            .then((res) => res.json())
+            .then((data) => {
+              console.log("Loader Data:", data);
+              return data;
+            });
         },
         element: (
           <PrivateRoute>
@@ -87,6 +89,11 @@ const router = createBrowserRouter([
   {
     path: "/addTask",
     element: <AddTask></AddTask>,
+  },
+  {
+    path: "/update-task/:id",
+    loader: ({params}) => fetch(`http://localhost:3000/tasks/${params.id}`),
+    Component: UpdateTask,
   },
 ]);
 

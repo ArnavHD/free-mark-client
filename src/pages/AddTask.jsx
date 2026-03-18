@@ -96,6 +96,7 @@ if(loading){
                   Pick a Category
                 </option>
                 <option value="Photographer">Photographer</option>
+                <option value="Web Developer">Web Developer</option>
                 <option value="Music and Audio">Music And Audio</option>
                 <option value="Content Creator">Content Creator</option>
                 <option value="AI Services">AI Services</option>

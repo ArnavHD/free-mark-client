@@ -6,6 +6,7 @@ import { FaCircleUser } from 'react-icons/fa6';
 
 const Navbar = () => {
   const { user, logOut } = use(AuthContext);
+  console.log(user);
   const handleLogOut = ()=>{
     console.log("User trying to logout");
     logOut()
@@ -60,7 +61,13 @@ const Navbar = () => {
                 <li>
                   {user ? (
                     <div className="flex justify-between">
-                      <FaCircleUser size={30} />
+                      <div>
+                        {user?.photoURL ? (
+                          <img className="" src={user.photoURL}></img>
+                        ) : (
+                          <FaCircleUser size={30} />
+                        )}
+                      </div>
                       <div>
                         <button onClick={handleLogOut} className="btn">
                           LogOut
@@ -134,10 +141,16 @@ const Navbar = () => {
             </Link> */}
             {user ? (
               <div className="flex justify-between items-center gap-4">
-                <FaCircleUser size={35} color="white" />
+                <div>
+                  {user?.photoURL ? (
+                    <img className="w-12 h-12 rounded-full" src={user.photoURL}></img>
+                  ) : (
+                    <FaCircleUser size={30} />
+                  )}
+                </div>
                 <div>
                   <button onClick={handleLogOut} className="btn">
-                    LogOut
+                    Log Out
                   </button>
                 </div>
               </div>

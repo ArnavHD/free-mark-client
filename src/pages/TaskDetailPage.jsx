@@ -1,8 +1,19 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import Navbar from '../components/Navbar';
+import Swal from 'sweetalert2';
 
 const TaskDetailPage = () => {
+    const hanldeSweet = ()=>{
+        Swal.fire({
+          title: "Congratulations!!",
+          text: "Your Application has been sent",
+          imageUrl: "https://media.tenor.com/DK--JTi4oQMAAAAm/smiley-face.webp",
+          imageWidth: 300,
+          imageHeight: 250,
+          imageAlt: "Custom image",
+        });
+    }
     const {id} = useParams();
     console.log("This is id: ", id);
     const data = useLoaderData();
@@ -17,6 +28,9 @@ const TaskDetailPage = () => {
           <p>
             {description}
           </p>
+        </div>
+        <div className='flex justify-end'>
+          <button onClick={hanldeSweet} className='btn btn-primary mt-5 mb-5 mr-5'>Apply Now !!</button>
         </div>
         <figure>
           <img

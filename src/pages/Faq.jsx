@@ -2,7 +2,7 @@ import React from 'react';
 
 const Faq = () => {
     return (
-      <div className="mx-10 flex justify-between items-center mt-20 mb-20">
+      <div className="mx-10 flex justify-between bg-gray-100/60 p-10 rounded-xl items-center mt-20 mb-20">
         <div className="space-y-3 w-1/2">
           <h4 className="text-xm text-">Talk to Support</h4>
           <h2 className="font-bold text-3xl">Frequently asked Questions</h2>

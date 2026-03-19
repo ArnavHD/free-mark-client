@@ -22,7 +22,7 @@ const Navbar = () => {
 
   }
     return (
-      <div className="md:mx-36">
+      <div className="md:mx-12 lg:mx-36">
         {/* <h1 className="text-white">{user && user.email}</h1> */}
         <div className="navbar bg-transparent ">
           <div className="navbar-start">

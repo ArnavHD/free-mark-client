@@ -1,4 +1,7 @@
 import React from 'react';
+import { FaEye } from 'react-icons/fa6';
+import { HiPencil } from 'react-icons/hi';
+import { MdDelete } from 'react-icons/md';
 import { Link } from 'react-router';
 import Swal from 'sweetalert2';
 
@@ -47,33 +50,46 @@ const MyTaskCard = ({single, tasks, setTasks}) => {
           <img src={url} className="w-full h-full object-cover" alt="Album" />
         </figure>
         <div className="card-body">
-          <div >
+          <div>
             <h2 className="card-title">{task_Title}</h2>
-            <p>{description}</p>
+            <p className="w-full xl:hidden">
+              {description.length > 30 ? description.slice(0, 20) : description}
+              {description.length > 30 ? (
+                <span className="font-bold">...see more</span>
+              ) : (
+                ""
+              )}
+            </p>
+            <p className="hidden xl:block">{description}</p>
           </div>
 
           <div className="flex justify-between items-center">
             <h3 className="text-xm font-bold bg-sky-200 py-1 px-2 rounded-xs">
               {category}
             </h3>
-            <h3 className="text-xm font-bold bg-gray-200 py-1 px-2 rounded-xs">
+            <h3 className="text-xm lg:hidden xl:block font-bold bg-gray-200 py-1 px-2 rounded-xs">
               {formatedDate}
             </h3>
           </div>
-          <div className="card-actions flex justify-end items-end">
+          <div className="card-actions flex justify-end lg:justify-start xl:justify-end items-end">
             <button className="btn btn-primary">
               <Link to={`/browse-tasks-layout/browse-tasks/${_id}`}>
-                View details
+                <FaEye className="hidden lg:block xl:hidden" size={20} />
+                <span className="block lg:hidden xl:block">View</span>
               </Link>
             </button>
             <button
               onClick={() => handleDelete(_id)}
               className="btn btn-primary"
             >
-              Delete
+              <MdDelete size={20} className="hidden lg:block xl:hidden" />
+              <span className="block lg:hidden xl:block">Delete</span>
             </button>
             <button className="btn btn-primary">
-              <Link to={`/update-task/${_id}`}>Update</Link>
+              <Link to={`/update-task/${_id}`}>
+                <HiPencil size={20} className="hidden lg:block xl:hidden" />
+                <span className="block lg:hidden xl:block">Update</span>
+              </Link>
             </button>
           </div>
         </div>

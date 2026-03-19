@@ -17,7 +17,7 @@ const MyTasks = () => {
     const filteredData = tasks.filter(single => single.email === user?.email).sort((a,b)=> new Date(a.Deadline) - new Date(b.Deadline));
     console.log(filteredData);
     return (
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4  mx-16 mt-10 mb-15">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mx-4 lg:mx-6 xl:mx-16 mt-10 mb-15">
         {filteredData.map((single) => (
           <MyTaskCard 
           key={single._id}

@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Swal from "sweetalert2";
 import { AuthContext } from "../provider/AuthProvider";
 import Loading from "./Loading";
+import Footer from "./Footer";
 
 const AddTask = () => {
     const {user, loading} = use(AuthContext);
@@ -41,19 +42,19 @@ if(loading){
   };
 
   return (
-    <div className="mb-20">
+    <div className="">
       <div className="bg-black ">
         <Navbar></Navbar>
       </div>
 
-      <div className="p-12 text-center bg-black/90 mx-70 mt-10 space-y-4">
+      <div className="p-4 mb-10 pb-10 md:p-12 text-center bg-black/90 mx-3 md:mx-15 lg:mx-25 xl:mx-70 mt-10 space-y-4">
         <h1 className="text-5xl text-white">Add New Task</h1>
         <p className="text-white">
           Add a new job by providing the required details below. This will help
           you track progress, manage timelines, and stay organized efficiently.
         </p>
         <form onSubmit={handleAddTask}>
-          <div className="grid grid-cols-1  md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4">
               <label className="label">Name</label>
               <input
@@ -146,6 +147,9 @@ if(loading){
           </div>
           <input type="submit" value="Add Task" className="btn w-full mt-5" />
         </form>
+      </div>
+      <div>
+        <Footer></Footer>
       </div>
     </div>
   );

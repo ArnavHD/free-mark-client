@@ -20,7 +20,7 @@ const TaskDetailPage = () => {
     console.log("this is from taskdetail", data);
     const filterData = data.find(filData => filData._id == id);
     console.log("This is filtered data: ",filterData);
-    const {task_Title, description, url} = filterData;
+    const {task_Title,Deadline, description, url} = filterData;
     return (
       <div className="card bg-base-100 w-72 md:w-96  mx-auto mt-20 mb-10 shadow-sm">
         <div className="card-body">
@@ -28,6 +28,10 @@ const TaskDetailPage = () => {
           <p>
             {description}
           </p>
+        </div>
+        <div className='flex justify-end mr-5'>
+          <h2 className='bg-blue-300 p-2 rounded-l-xs'>Deadline</h2>
+          <h2 className='bg-gray-300 p-2 rounded-r-xs'>{Deadline}</h2>
         </div>
         <div className='flex justify-end'>
           <button onClick={hanldeSweet} className='btn btn-primary mt-5 mb-5 mr-5'>Apply Now !!</button>

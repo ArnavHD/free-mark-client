@@ -66,7 +66,7 @@ const Navbar = () => {
                     <div className="flex justify-between">
                       <div>
                         {user?.photoURL ? (
-                          <img className="" src={user.photoURL}></img>
+                          <img className="w-10 rounded-full" src={user.photoURL}></img>
                         ) : (
                           <FaCircleUser size={30} />
                         )}

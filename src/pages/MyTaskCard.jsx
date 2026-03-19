@@ -47,7 +47,7 @@ const MyTaskCard = ({single, tasks, setTasks}) => {
           <img src={url} className="w-full h-full object-cover" alt="Album" />
         </figure>
         <div className="card-body">
-          <div className=''>
+          <div >
             <h2 className="card-title">{task_Title}</h2>
             <p>{description}</p>
           </div>

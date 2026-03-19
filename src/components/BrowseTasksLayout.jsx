@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import { Outlet } from 'react-router';
+import Footer from '../pages/Footer';
 
 const BrowseTasksLayout = () => {
     
@@ -11,6 +12,7 @@ const BrowseTasksLayout = () => {
         </div>
 
         <Outlet></Outlet>
+        <Footer></Footer>
       </div>
     );
 };

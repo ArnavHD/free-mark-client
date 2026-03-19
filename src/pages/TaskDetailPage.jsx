@@ -8,7 +8,7 @@ const TaskDetailPage = () => {
         Swal.fire({
           title: "Congratulations!!",
           text: "Your Application has been sent",
-          imageUrl: "https://media.tenor.com/DK--JTi4oQMAAAAm/smiley-face.webp",
+          imageUrl: "https://i.ibb.co/8DwSJWRv/lke.webp",
           imageWidth: 300,
           imageHeight: 250,
           imageAlt: "Custom image",
@@ -22,7 +22,7 @@ const TaskDetailPage = () => {
     console.log("This is filtered data: ",filterData);
     const {task_Title, description, url} = filterData;
     return (
-      <div className="card bg-base-100 w-96 mx-auto mt-20 mb-10 shadow-sm">
+      <div className="card bg-base-100 w-72 md:w-96  mx-auto mt-20 mb-10 shadow-sm">
         <div className="card-body">
           <h2 className="card-title">{task_Title}</h2>
           <p>

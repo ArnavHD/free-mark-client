@@ -2,18 +2,18 @@ import React from 'react';
 
 const Packages = () => {
     return (
-      <div className="mx-10 bg-gray-200/60 p-10 pb-20 pt-20 rounded-xl">
+      <div className="mx-4 pt-5  md:mx-10 bg-gray-200/60 p-4 md:p-10 md:pb-20 md:pt-15 rounded-xl">
         <div className="text-center space-y-3 mb-10">
           <p className="text-purple-600 font-bold">Best Plan To Go With</p>
-          <h2 className="text-4xl font-semibold">
+          <h2 className="text-2xl md:text-4xl font-semibold">
             Tailored Packages for Every <br /> Business Stage and Size
           </h2>
-          <p className="text-xl text-gray-400">
+          <p className="text-xm md:text-xl text-gray-400">
             Enter a realm of limitless possibilities, where extraordinary talent
             thrives <br /> and beckons you to unfold your boundless potential.
           </p>
         </div>
-        <div className="xl:flex flex-col xl:flex-row justify-center items-center grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10">
+        <div className="pb-5 xl:pb-0 lg:pb-0 grid grid-cols-1 lg:grid-cols-2 lg:gap-5  gap-4 md:gap-10 justify-items-center lg:mx-10 xl:mx-auto lg:justify-items-stretch xl:flex xl:justify-center xl:items-center">
           <div className="hover-3d">
             <div className="card md:w-96 bg-base-100 shadow-sm">
               <div className="card-body">
@@ -153,7 +153,7 @@ const Packages = () => {
             <div></div>
           </div>
           <div className="hover-3d ">
-            <div className="card md:w-96 pb-5  pt-5 bg-base-100 shadow-sm">
+            <div className="card md:w-96 xl:pb-5  xl:pt-5 bg-base-100 shadow-sm">
               <div className="card-body ">
                 <span className="badge badge-xs badge-warning">
                   Most Popular

@@ -6,16 +6,16 @@ const StreamLine = () => {
     return (
       <div className="mx-2 md:mx-10 mt-20 mb-40">
         <div className="text-center space-y-3">
-          <h2 className="text-2xl md:text-4xl font-semibold">
+          <h2 className="text-3xl md:text-4xl font-semibold">
             Streamlined Job Search Experience
           </h2>
-          <p className="text-xs md:text-xl md:w-3/5 mx-auto">
+          <p className="text-xs md:text-xl md:w-5/6 lg:w-3/5 mx-auto">
             Discovering your dream job has never been simpler with our intuitive
             platform. Start your journey towards success now—don't delay!
           </p>
         </div>
         <div className="flex flex-col gap-7 md:flex-row justify-center items-center  mt-15 mb-20">
-          <div className="text-center border rounded-xl md:rounded-none p-3 md:border-0 space-y-4 md:border-r md:border-r-gray-300 md:p-10">
+          <div className="text-center border border-gray-300 rounded-xl md:rounded-none p-3 md:border-0 space-y-4 md:border-r md:border-r-gray-300 md:p-10">
             <div className="border border-gray-200 shadow-2xl rounded-full h-16 w-16 flex justify-center items-center mx-auto">
               <FaNetworkWired size={40} />
             </div>
@@ -27,7 +27,7 @@ const StreamLine = () => {
               </p>
             </div>
           </div>
-          <div className="border rounded-xl md:rounded-none p-3 md:border-0 text-center space-y-4 md:border-r md:border-r-gray-300 md:p-10">
+          <div className="border border-gray-300 rounded-xl md:rounded-none p-3 md:border-0 text-center space-y-4 md:border-r md:border-r-gray-300 md:p-10">
             <div className="border border-gray-200 shadow-2xl rounded-full h-16 w-16 flex justify-center items-center mx-auto">
               <BsFillBagPlusFill size={40} />
             </div>
@@ -38,7 +38,7 @@ const StreamLine = () => {
               </p>
             </div>
           </div>
-          <div className="border rounded-xl md:rounded-none p-8 md:border-0 text-center space-y-4 md:p-10">
+          <div className="border border-gray-300 rounded-xl md:rounded-none p-8 md:border-0 text-center space-y-4 md:p-10">
             <div className="border border-gray-200 shadow-2xl rounded-full h-16 w-16 flex justify-center items-center mx-auto">
               <FaUsersLine size={40} />
             </div>

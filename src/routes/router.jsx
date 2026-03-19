@@ -11,6 +11,7 @@ import Register from "../pages/Register";
 import AuthLayout from "../Layout/AuthLayout";
 import PrivateRoute from "../provider/PrivateRoute";
 import UpdateTask from "../pages/UpdateTask";
+import ErrorPage from "../components/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -84,7 +85,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/*",
-    element: <div>404 Error</div>,
+    element: <ErrorPage></ErrorPage>,
   },
   {
     path: "/addTask",

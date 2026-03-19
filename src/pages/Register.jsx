@@ -1,9 +1,11 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 
 const Register = () => {
     const { createUser, setUser, updateUserProfile} = use(AuthContext);
+    const [nameError, setNameError] = useState("");
+    const [passError, setPassError] = useState("");
     const navigate = useNavigate();
     const handleRegister = (e)=>{
         e.preventDefault();
@@ -13,6 +15,22 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         const url = form.url.value;
+        const check = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).+$/;
+        if(name.length < 5){
+          setNameError("The name should be at least 5 characters");
+          return;
+        }
+        else{
+          setNameError("");
+        }
+        if (!check.test(password)) {
+          setPassError(
+            "Password must contain uppercase, lowercase, number, special character and be at least 6 characters long",
+          );
+          return;
+        } else {
+          setNameError("");
+        }
         console.log({name, email, password, url});
 
         createUser(email, password)
@@ -46,6 +64,9 @@ const Register = () => {
             <form onSubmit={handleRegister} className="fieldset">
               <label className="label">Name</label>
               <input type="text" name='name' className="input" placeholder="Your Name" required/>
+              {
+                nameError && <p className='text-sm text-red-500'>{nameError}</p>
+              }
 
               <label className="label">Photo URL</label>
               <input type="text" name='url' className="input" placeholder="Enter Photo URL"  required/>
@@ -55,6 +76,9 @@ const Register = () => {
 
               <label className="label">Password</label>
               <input type="password" name='password' className="input" placeholder="Password" required/>
+              {
+                passError && <p className='text-sm text-red-500'>{passError}</p>
+              }
               <div>
                 <a className="link link-hover">Forgot password?</a>
               </div>

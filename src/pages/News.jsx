@@ -15,13 +15,13 @@ const News = () => {
       {
         id: 0,
         title: "Software Engineers win the lottery",
-        author: "Rensona and Jacky",
+        author: "Rensona Jacky",
         price: 500,
         img: "https://i.ibb.co/prBs1BrQ/lottery.jpg",
       },
       {
         id: 1,
-        title: "AI revolusion explodes the world",
+        title: "AI revolusion explodes the world into mass",
         author: "Stiphen snippy",
         price: 700,
         img: "https://i.ibb.co/rGT1ywnt/ai-Rev.webp",
@@ -42,24 +42,24 @@ const News = () => {
       },
       {
         id: 4,
-        title: "Fun tech game",
+        title: "Tech game has another level of fun",
         author: "Mack Nicolson",
         price: 50,
         img: "https://i.ibb.co/HTMHbbPL/game.avif",
       },
     ];
     return (
-      <div className="mx-10 p-15 mb-10 rounded-2xl bg-gray-200">
-        <h1 className="text-4xl mb-5 font-semibold">
+      <div className="mx-4 lg:mx-10 p-4 lg:p-15 mb-10 rounded-2xl bg-gray-200">
+        <h1 className="text-2xl md:text-4xl mb-5 mt-5 lg:mt-0 lg:mb-5 font-semibold">
           Your One-stop online Markateplace News
         </h1>
-        <p className="text-xl text-gray-500 md:w-3/5">
+        <p className="text-xm md:text-xl text-gray-500 lg:w-3/5">
           Your premier online marketplace. Find quality products and services,
           connect with trusted sellers, and enjoy a seamless shopping experience
           today.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-7 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-4 lg:gap-7 mt-10">
           {show
             ? news.map((singleNews) => (
                 <NewsCard singleNews={singleNews}></NewsCard>

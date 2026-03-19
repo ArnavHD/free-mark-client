@@ -4,8 +4,8 @@ import "swiper/css";
 
 const Carousel = () => {
   return (
-    <div className="mt-20 mb-20 md:mx-10">
-      <h2 className="text-5xl font-bold mb-10 text-center">Our Services</h2>
+    <div className="mt-10 lg:mt-20 mb-20 md:mx-10">
+      <h2 className="text-3xl lg:text-5xl font-bold mb-5 lg:mb-10 text-center">Our Services</h2>
       <Swiper
         modules={[Autoplay]}
         slidesPerView={4} // 👈 4 slides visible
@@ -24,7 +24,7 @@ const Carousel = () => {
         }}
       >
         <SwiperSlide>
-          <div className="  h-100 bg-[url('https://i.ibb.co/ksh20G7g/photomen.webp')] bg-cover bg-center bg-no-repeat rounded-xl">
+          <div className="mx-2 md:mx-0 h-100 bg-[url('https://i.ibb.co/ksh20G7g/photomen.webp')] bg-cover bg-center bg-no-repeat rounded-xl">
             <div className="pt-2 flex justify-end">
               <h3 className="relative z-10 text-black mr-2 w-30 p-2 bg-white rounded-sm text-center ">
                 11 Listing
@@ -35,11 +35,11 @@ const Carousel = () => {
                 Photographer
               </h3>
             </div>
-            <div className="absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent rounded-xl"></div>
+            <div className="mx-2 md:mx-0 absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent rounded-xl"></div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-gray-500 h-100 bg-cover bg-left bg-no-repeat rounded-xl bg-[url('https://i.ibb.co/rKX4sd7Y/mic.jpg')]">
+          <div className="mx-2 md:mx-0 bg-gray-500 h-100 bg-cover bg-left bg-no-repeat rounded-xl bg-[url('https://i.ibb.co/rKX4sd7Y/mic.jpg')]">
             <div className="pt-2 flex justify-end">
               <h3 className="relative z-10 text-black mr-2 w-30 p-2 bg-white rounded-sm text-center ">
                 13 Listing
@@ -50,11 +50,11 @@ const Carousel = () => {
                 Music and Audio
               </h3>
             </div>
-            <div className="absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent rounded-xl"></div>
+            <div className="mx-2 md:mx-0 absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent rounded-xl"></div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-gray-500 h-100 bg-cover  bg-no-repeat rounded-xl bg-[url('https://i.ibb.co/08yZvcp/writer.jpg')]">
+          <div className="mx-2 md:mx-0 bg-gray-500 h-100 bg-cover  bg-no-repeat rounded-xl bg-[url('https://i.ibb.co/08yZvcp/writer.jpg')]">
             <div className="pt-2 flex justify-end">
               <h3 className="relative z-10 text-black mr-2  w-30 p-2 bg-white rounded-sm text-center ">
                 15 Listing
@@ -65,11 +65,11 @@ const Carousel = () => {
                 Writer and Planner
               </h3>
             </div>
-            <div className="absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent rounded-xl"></div>
+            <div className="mx-2 md:mx-0 absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent rounded-xl"></div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-gray-500 h-100 bg-cover bg-center bg-no-repeat rounded-xl bg-[url('https://i.ibb.co/HTsQ9QYW/content-Creator.jpg')]">
+          <div className="mx-2 md:mx-0 bg-gray-500 h-100 bg-cover bg-center bg-no-repeat rounded-xl bg-[url('https://i.ibb.co/HTsQ9QYW/content-Creator.jpg')]">
             <div className="pt-2 flex justify-end">
               <h3 className="relative z-10 text-black mr-2 w-30 p-2 bg-white rounded-sm text-center ">
                 17 Listing
@@ -80,11 +80,11 @@ const Carousel = () => {
                 Content Creator
               </h3>
             </div>
-            <div className="absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent rounded-xl"></div>
+            <div className="mx-2 md:mx-0 absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent rounded-xl"></div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-gray-500 h-100 bg-cover bg-center bg-no-repeat rounded-xl bg-[url('https://i.ibb.co/Xmhy0hY/ai.jpg')]">
+          <div className="mx-2 md:mx-0 bg-gray-500 h-100 bg-cover bg-center bg-no-repeat rounded-xl bg-[url('https://i.ibb.co/Xmhy0hY/ai.jpg')]">
             <div className="pt-2 flex justify-end">
               <h3 className="relative z-10 text-black mr-2 w-30 p-2 bg-white rounded-sm text-center ">
                 20 Listing
@@ -95,11 +95,11 @@ const Carousel = () => {
                 AI Services
               </h3>
             </div>
-            <div className="absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent rounded-xl"></div>
+            <div className="mx-2 md:mx-0 absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent rounded-xl"></div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-gray-500 h-100 bg-cover bg-center bg-no-repeat rounded-xl bg-[url('https://i.ibb.co/677yxB73/graphics-Designers.jpg')]">
+          <div className="mx-2 md:mx-0 bg-gray-500 h-100 bg-cover bg-center bg-no-repeat rounded-xl bg-[url('https://i.ibb.co/677yxB73/graphics-Designers.jpg')]">
             <div className="pt-2 flex justify-end">
               <h3 className="relative z-10 text-black mr-2 w-30 p-2 bg-white rounded-sm text-center ">
                 13 Listing
@@ -110,11 +110,11 @@ const Carousel = () => {
                 Graphics Designers
               </h3>
             </div>
-            <div className="absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent rounded-xl"></div>
+            <div className="mx-2 md:mx-0 absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent rounded-xl"></div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-gray-500 h-100 bg-cover bg-center bg-no-repeat rounded-xl bg-[url('https://i.ibb.co/BK5XrpwH/csimg.jpg')]">
+          <div className="mx-2 md:mx-0 bg-gray-500 h-100 bg-cover bg-center bg-no-repeat rounded-xl bg-[url('https://i.ibb.co/BK5XrpwH/csimg.jpg')]">
             <div className="pt-2 flex justify-end">
               <h3 className="relative z-10 text-black mr-2 w-30 p-2 bg-white rounded-sm text-center ">
                 15 Listing
@@ -125,11 +125,11 @@ const Carousel = () => {
                 Programming and Tech
               </h3>
             </div>
-            <div className="absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent rounded-xl"></div>
+            <div className="mx-2 md:mx-0 absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent rounded-xl"></div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-gray-500 h-100 bg-cover bg-center bg-no-repeat rounded-xl bg-[url('https://i.ibb.co/mrz0dTwG/digital.png')]">
+          <div className="mx-2 md:mx-0 bg-gray-500 h-100 bg-cover bg-center bg-no-repeat rounded-xl bg-[url('https://i.ibb.co/mrz0dTwG/digital.png')]">
             <div className="pt-2 flex justify-end">
               <h3 className="relative z-10 text-black mr-2 w-30 p-2 bg-white rounded-sm text-center ">
                 18 Listing
@@ -140,11 +140,11 @@ const Carousel = () => {
                 Digital Marketing
               </h3>
             </div>
-            <div className="absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent rounded-xl"></div>
+            <div className="mx-2 md:mx-0 absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent rounded-xl"></div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-gray-500 h-100 bg-cover bg-center bg-no-repeat rounded-xl bg-[url('https://i.ibb.co/5XjsPJ1P/consultant.avif')]">
+          <div className="mx-2 md:mx-0 bg-gray-500 h-100 bg-cover bg-center bg-no-repeat rounded-xl bg-[url('https://i.ibb.co/5XjsPJ1P/consultant.avif')]">
             <div className="pt-2 flex justify-end">
               <h3 className="relative z-10 text-black mr-2 w-30 p-2 bg-white rounded-sm text-center ">
                 17 Listing
@@ -155,11 +155,11 @@ const Carousel = () => {
                 Consultant
               </h3>
             </div>
-            <div className="absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent rounded-xl"></div>
+            <div className="mx-2 md:mx-0 absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent rounded-xl"></div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-gray-500 h-100 bg-cover bg-center bg-no-repeat rounded-xl bg-[url('https://i.ibb.co/m5YC5vzQ/seo.png')]">
+          <div className="mx-2 md:mx-0 bg-gray-500 h-100 bg-cover bg-center bg-no-repeat rounded-xl bg-[url('https://i.ibb.co/m5YC5vzQ/seo.png')]">
             <div className="pt-2 flex justify-end">
               <h3 className="relative z-10 text-black mr-2 w-30 p-2 bg-white rounded-sm text-center ">
                 14 Listing
@@ -170,7 +170,7 @@ const Carousel = () => {
                 SEO Writer
               </h3>
             </div>
-            <div className="absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent rounded-xl"></div>
+            <div className="mx-2 md:mx-0 absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent rounded-xl"></div>
           </div>
         </SwiperSlide>
       </Swiper>

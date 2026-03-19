@@ -3,7 +3,7 @@ import React from 'react';
 const Packages = () => {
     return (
       <div className="mx-10 bg-gray-200/60 p-10 pb-20 pt-20 rounded-xl">
-        <div className="text-center space-y-3 mb-20">
+        <div className="text-center space-y-3 mb-10">
           <p className="text-purple-600 font-bold">Best Plan To Go With</p>
           <h2 className="text-4xl font-semibold">
             Tailored Packages for Every <br /> Business Stage and Size
@@ -13,11 +13,10 @@ const Packages = () => {
             thrives <br /> and beckons you to unfold your boundless potential.
           </p>
         </div>
-        <div className="flex justify-center items-center gap-10">
+        <div className="xl:flex flex-col xl:flex-row justify-center items-center grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10">
           <div className="hover-3d">
-            <div className="card w-96 bg-base-100 shadow-sm">
+            <div className="card md:w-96 bg-base-100 shadow-sm">
               <div className="card-body">
-                
                 <div className="flex justify-between">
                   <h2 className="text-2xl font-semibold">Standard Plan</h2>
 
@@ -154,7 +153,7 @@ const Packages = () => {
             <div></div>
           </div>
           <div className="hover-3d ">
-            <div className="card w-96 pb-5  pt-5 bg-base-100 shadow-sm">
+            <div className="card md:w-96 pb-5  pt-5 bg-base-100 shadow-sm">
               <div className="card-body ">
                 <span className="badge badge-xs badge-warning">
                   Most Popular
@@ -203,7 +202,7 @@ const Packages = () => {
                     </svg>
                     <span>Customizable style templates</span>
                   </li>
-                  
+
                   <li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -294,9 +293,8 @@ const Packages = () => {
             <div></div>
           </div>
           <div className="hover-3d">
-            <div className="card w-96 bg-base-100 shadow-sm">
+            <div className="card md:w-96 bg-base-100 shadow-sm">
               <div className="card-body">
-                
                 <div className="flex justify-between">
                   <h2 className="text-2xl font-semibold">Extended Plan</h2>
 

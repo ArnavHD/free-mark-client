@@ -55,7 +55,7 @@ const router = createBrowserRouter([
       {
         path: "browse-tasks",
         loader: () => fetch("https://free-mark-server.vercel.app/tasks"),
-        Component: BrowseTasks,
+        element: <BrowseTasks></BrowseTasks>,
         hydrateFallbackElement: <Loading></Loading>,
       },
       {

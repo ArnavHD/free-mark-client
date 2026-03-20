@@ -2,7 +2,7 @@
 
 ## 🌐 Live Website
 
-👉 https://your-live-link-here.vercel.app/
+👉 https://free-mark.web.app/
 
 ---
 
@@ -19,30 +19,34 @@
 * ⏰ Each job includes a **deadline to ensure timely applications**
 * 📩 Job seekers can **apply directly through the platform**
 * 📊 Clean and user-friendly interface for **better user experience**
-* 🔐 (Optional: add if you have it) Authentication system for secure access
+* 🔐 Authentication system for secure access
 
 ---
 
 ## 🛠️ Technologies Used
 
-* Frontend: HTML, CSS, JavaScript (React if used)
+* Frontend: HTML, CSS, JavaScript (React)
 * Backend: Node.js, Express.js
 * Database: MongoDB
-* Deployment: Vercel
+* Backend Deployment: Vercel
+*Frontend Deployment: Firebase
 
 ---
 
 ## 📷 Screenshots (Optional)
 
 *Add screenshots of your project here*
-
+![alt text](image.png)
 ---
 
 ## ⚙️ Installation & Setup
 
+client side repository: https://github.com/ArnavHD/free-mark-client
+server side repository: https://github.com/ArnavHD/free-mark-server
+
 ```bash
-git clone https://github.com/your-username/free-mark.git
-cd free-mark
+git clone https://github.com/ArnavHD/free-mark-client
+cd free-mark-client
 npm install
 npm run dev
 ```

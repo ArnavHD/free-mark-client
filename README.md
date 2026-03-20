@@ -1,16 +1,58 @@
-# React + Vite
+# 🚀 Free-Mark
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🌐 Live Website
 
-Currently, two official plugins are available:
+👉 https://your-live-link-here.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📌 About the Project
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Free-Mark** is a freelance marketplace-inspired web application where employers can post job circulars and job seekers can explore and apply for opportunities. The platform focuses on simplicity, deadlines, and smooth interaction between employers and applicants.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+* 📝 Employers can **post, edit, and delete job listings**
+* 🔍 Users can **browse and search for available jobs**
+* ⏰ Each job includes a **deadline to ensure timely applications**
+* 📩 Job seekers can **apply directly through the platform**
+* 📊 Clean and user-friendly interface for **better user experience**
+* 🔐 (Optional: add if you have it) Authentication system for secure access
+
+---
+
+## 🛠️ Technologies Used
+
+* Frontend: HTML, CSS, JavaScript (React if used)
+* Backend: Node.js, Express.js
+* Database: MongoDB
+* Deployment: Vercel
+
+---
+
+## 📷 Screenshots (Optional)
+
+*Add screenshots of your project here*
+
+---
+
+## ⚙️ Installation & Setup
+
+```bash
+git clone https://github.com/your-username/free-mark.git
+cd free-mark
+npm install
+npm run dev
+```
+
+---
+
+## 📬 Contact
+
+If you have any feedback or suggestions, feel free to reach out!
+
+---
+
+⭐ Don’t forget to star the repo if you like the project!

@@ -6,14 +6,14 @@ import { FaCircleUser } from 'react-icons/fa6';
 
 const Navbar = () => {
   const { user, logOut } = use(AuthContext);
-  console.log(user);
+  // console.log(user);
   const navigate = useNavigate();
   const handleLogOut = ()=>{
-    console.log("User trying to logout");
+    // console.log("User trying to logout");
     logOut()
       .then(() => {
         // alert("Logged Out Successfully");
-        console.log("Logout successful");
+        // console.log("Logout successful");
         navigate("/");
       })
       .catch((error) => {

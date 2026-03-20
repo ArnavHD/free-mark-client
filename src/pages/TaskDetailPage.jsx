@@ -15,11 +15,11 @@ const TaskDetailPage = () => {
         });
     }
     const {id} = useParams();
-    console.log("This is id: ", id);
+    // console.log("This is id: ", id);
     const data = useLoaderData();
-    console.log("this is from taskdetail", data);
+    // console.log("this is from taskdetail", data);
     const filterData = data.find(filData => filData._id == id);
-    console.log("This is filtered data: ",filterData);
+    // console.log("This is filtered data: ",filterData);
     const {task_Title,Deadline, description, url} = filterData;
     return (
       <div className="card bg-base-100 w-72 md:w-96  mx-auto mt-20 mb-10 shadow-sm">

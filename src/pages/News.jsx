@@ -8,7 +8,7 @@ const News = () => {
 
   const click = ()=>{
     setShow(!show);
-    console.log(show);
+    // console.log(show);
   }
 
     const news = [

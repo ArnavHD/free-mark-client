@@ -12,7 +12,7 @@ const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const provider = new GoogleAuthProvider();
 
-  console.log(user);
+  // console.log(user);
 
   const signInPopUp = ()=>{
     return signInWithPopup(auth, provider);

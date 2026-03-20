@@ -9,7 +9,7 @@ const Register = () => {
     const navigate = useNavigate();
     const handleRegister = (e)=>{
         e.preventDefault();
-        console.log(e.target);
+        // console.log(e.target);
         const form = e.target;
         const name = form.name.value;
         const email = form.email.value;
@@ -31,7 +31,7 @@ const Register = () => {
         } else {
           setNameError("");
         }
-        console.log({name, email, password, url});
+        // console.log({name, email, password, url});
 
         createUser(email, password)
           .then((result) => {
@@ -49,7 +49,7 @@ const Register = () => {
               });
           })
           .catch((error) => {
-            const errorCode = error.code;
+            // const errorCode = error.code;
             const errorMessage = error.message;
             alert(errorMessage);
           });

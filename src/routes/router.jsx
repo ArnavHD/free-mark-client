@@ -12,6 +12,7 @@ import AuthLayout from "../Layout/AuthLayout";
 import PrivateRoute from "../provider/PrivateRoute";
 import UpdateTask from "../pages/UpdateTask";
 import ErrorPage from "../components/ErrorPage";
+import Loading from "../pages/Loading";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
   {
     // path: "/my-tasks",
     // loader: () => {
-    //   const data = fetch("http://localhost:3000/tasks").then((res) =>
+    //   const data = fetch("https://free-mark-server.vercel.app/tasks").then((res) =>
     //     res.json(),
     //   );
     //   console.log(data);
@@ -53,25 +54,27 @@ const router = createBrowserRouter([
     children: [
       {
         path: "browse-tasks",
-        loader: () => fetch("http://localhost:3000/tasks"),
+        loader: () => fetch("https://free-mark-server.vercel.app/tasks"),
         Component: BrowseTasks,
+        hydrateFallbackElement: <Loading></Loading>,
       },
       {
         path: "browse-tasks/:id",
-        loader: () => fetch("http://localhost:3000/tasks"),
+        loader: () => fetch("https://free-mark-server.vercel.app/tasks"),
         element: (
           <PrivateRoute>
             <TaskDetailPage></TaskDetailPage>
           </PrivateRoute>
         ),
+        hydrateFallbackElement: <Loading></Loading>,
       },
       {
         path: "my-tasks",
         loader: () => {
-          return fetch("http://localhost:3000/tasks")
+          return fetch("https://free-mark-server.vercel.app/tasks")
             .then((res) => res.json())
             .then((data) => {
-              console.log("Loader Data:", data);
+              // console.log("Loader Data:", data);
               return data;
             });
         },
@@ -80,6 +83,7 @@ const router = createBrowserRouter([
             <MyTasks></MyTasks>
           </PrivateRoute>
         ),
+        hydrateFallbackElement: <Loading></Loading>,
       },
     ],
   },
@@ -93,8 +97,10 @@ const router = createBrowserRouter([
   },
   {
     path: "/update-task/:id",
-    loader: ({params}) => fetch(`http://localhost:3000/tasks/${params.id}`),
+    loader: ({ params }) =>
+      fetch(`https://free-mark-server.vercel.app/tasks/${params.id}`),
     Component: UpdateTask,
+    hydrateFallbackElement: <Loading></Loading>,
   },
 ]);
 

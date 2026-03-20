@@ -2,7 +2,7 @@ import React from "react";
 import { FcOk } from "react-icons/fc";
 
 const NewsCard = ({ singleNews }) => {
-  console.log(singleNews);
+//   console.log(singleNews);
   const { img, author, title } = singleNews;
   return (
     <div>

@@ -10,12 +10,12 @@ const LoginPage = () => {
     const [error, setError] = useState("");
 
     const handleGooglePopUp = ()=>{
-      console.log("Google clicked");
+      // console.log("Google clicked");
 
       signInPopUp()
       .then(result=>{
         const user = result.user;
-        console.log(user);
+        // console.log(user);
         navigate(`${location.state ? location.state : "/"}`);
       })
       .catch(error =>{
@@ -23,23 +23,23 @@ const LoginPage = () => {
       })
     }
 
-    console.log(location);
+    // console.log(location);
     const handleLogIn = (e)=>{
         e.preventDefault();
         const form = e.target;
         const email =  form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+        // console.log(email, password);
 
         signIn(email, password)
           .then((result) => {
             const user = result.user;
-            console.log(user);
+            // console.log(user);
             navigate(`${location.state ? location.state : "/" }`);
           })
           .catch((error) => {
             const errorCode = error.code;
-            const errorMessage = error.message;
+            // const errorMessage = error.message;
             setError(errorCode);
           });
     }

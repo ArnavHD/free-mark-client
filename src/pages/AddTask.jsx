@@ -6,21 +6,21 @@ import Loading from "./Loading";
 import Footer from "./Footer";
 
 const AddTask = () => {
-    const {user, loading} = use(AuthContext);
+  const { user, loading } = use(AuthContext);
 
-if(loading){
-    return <Loading></Loading>
-}
+  if (loading) {
+    return <Loading></Loading>;
+  }
 
   const handleAddTask = (e) => {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
     const newTask = Object.fromEntries(formData.entries());
-    console.log(newTask);
+    // console.log(newTask);
 
     //send data to the db
-    fetch("http://localhost:3000/tasks", {
+    fetch("https://free-mark-server.vercel.app/tasks", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -30,7 +30,7 @@ if(loading){
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          console.log("After adding coffee to db", data);
+          // console.log("After adding coffee to db", data);
           Swal.fire({
             title: "Task Added Successfully",
             icon: "success",
@@ -62,7 +62,6 @@ if(loading){
                 name="name"
                 className="input w-full disabled:border-gray-200 text-gray-400 cursor-not-allowed pointer-events-none"
                 value={user.displayName}
-                
               />
             </fieldset>
             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
@@ -72,7 +71,6 @@ if(loading){
                 name="email"
                 className="input w-full disabled:border-gray-200 text-gray-400 cursor-not-allowed pointer-events-none"
                 value={user.email}
-                
               />
             </fieldset>
             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4">
